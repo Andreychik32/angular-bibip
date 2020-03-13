@@ -16,6 +16,9 @@
 }
 
 .times {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .num {
     font-size: large;
   }
@@ -23,6 +26,7 @@
 
 .card-wrp {
   padding: 0.5rem;
+  max-width: max-content;
   .card {
     padding: 1rem 1.5rem;
     max-width: 20rem;
