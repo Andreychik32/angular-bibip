@@ -1,0 +1,68 @@
+@import '../../_variables.scss';
+
+.cardz {
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .card {
+    .header {
+      letter-spacing: 0.2rem;
+    }
+    .num {
+      font-size: xx-large;
+    }
+  }
+}
+
+.times {
+  .num {
+    font-size: large;
+  }
+}
+
+.card-wrp {
+  padding: 0.5rem;
+  .card {
+    padding: 1rem 1.5rem;
+    max-width: 20rem;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: lightgray;
+    .header {
+      padding: 0 0 0.5rem 0;
+      font-weight: bold;
+      font-size: large;
+      text-align: center;
+    }
+    .items {
+      .item {
+        padding: 0.5rem 0;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .num {
+          position: absolute;
+          left: 0;
+          font-weight: 700;
+        }
+        .content {
+          padding-left: 2.47rem;
+          .title {
+            text-align: center;
+          }
+          .info {
+            margin-top: 0.2rem;
+            text-align: center;
+            color: darkslategrey;
+            font-size: smaller;
+          }
+        }
+      }
+    }
+  }
+}

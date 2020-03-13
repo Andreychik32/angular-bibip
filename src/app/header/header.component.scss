@@ -1,0 +1,38 @@
+@import '../../_variables.scss';
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  // @include media(sm) {
+  //   flex-direction: column;
+  // }
+
+  .item {
+    input {
+      padding: .2rem .3rem;
+      color: #fff;
+      border: 0;
+      border-radius: 10px;
+      width: 2.7rem;
+      text-align: center;
+      font-size: medium;
+    }
+    span {
+      text-align: center;
+    }
+    padding: .5rem .8rem;
+    margin: .2rem .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    width: max-content;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+  }
+}

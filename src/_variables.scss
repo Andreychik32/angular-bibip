@@ -1,0 +1,22 @@
+@mixin media($media) {
+  @if $media == sm {
+    @media only screen and (max-width: 640px) {
+      @content;
+    }
+  }
+  @if $media == md {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $media == lg {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $media == xl {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+}
