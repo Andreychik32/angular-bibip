@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { By } from "@angular/platform-browser";
+import { DebugElement } from "@angular/core";
 
-import { HomePageComponent } from './home-page.component';
+import { HomePageComponent } from "./home-page.component";
 
-describe('HomePageComponent', () => {
+describe("HomePageComponent", () => {
   let component: HomePageComponent;
   let fixture: ComponentFixture<HomePageComponent>;
 
@@ -22,7 +22,7 @@ describe('HomePageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

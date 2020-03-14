@@ -1,9 +1,9 @@
 <app-header></app-header>
 <div class="cardz">
-  <div class="card-wrp">
+  <div class="card-wrp" *ngFor="let day of lessons.keys()">
     <div class="card">
       <div class="header">
-        HEAD
+        {{ day | toDay }}
       </div>
       <div class="items">
         <div class="item">
@@ -48,28 +48,6 @@
             </div>
           </div>
         </div>
-        <div class="item">
-          <div class="num">
-            1
-          </div>
-          <div class="content">
-            <div class="title">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </div>
-            <div class="info">
-              корп. 1, каб. 47
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-wrp">
-    <div class="card">
-      <div class="header">
-        HEAD
-      </div>
-      <div class="items">
         <div class="item">
           <div class="num">
             1
