@@ -8,6 +8,8 @@ import { Day, Lesson } from "../custom-types";
   styleUrls: ["./home-page.component.scss"]
 })
 export class HomePageComponent implements OnInit {
+  objectKeys = Object.keys;
+  parseInt = parseInt;
   lessons: Map<Day, { [key: number]: Lesson }>;
   constructor(private scheduleService: ScheduleService) {}
 

@@ -3,61 +3,22 @@
   <div class="card-wrp" *ngFor="let day of lessons.keys()">
     <div class="card">
       <div class="header">
-        {{ day | toDay }}
+        {{ day | toDay | uppercase }}
       </div>
       <div class="items">
-        <div class="item">
+        <div
+          class="item"
+          *ngFor="let lessonNum of objectKeys(lessons.get(day))"
+        >
           <div class="num">
-            1
+            {{ parseInt(lessonNum) + 1 }}
           </div>
           <div class="content">
             <div class="title">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              {{ lessons.get(day)[lessonNum].title }}
             </div>
             <div class="info">
-              корп. 1, каб. 47
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="num">
-            1
-          </div>
-          <div class="content">
-            <div class="title">
-              Lorem ipsum.
-            </div>
-            <div class="info">
-              корп. 1, каб. 47
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="num">
-            1
-          </div>
-          <div class="content">
-            <div class="title">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus
-              iste expedita obcaecati! Quam quis illo saepe adipisci, eveniet
-              repellat autem libero? Suscipit ex consequuntur sapiente illum
-              ipsa quasi amet accusamus.
-            </div>
-            <div class="info">
-              корп. 1, каб. 47
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="num">
-            1
-          </div>
-          <div class="content">
-            <div class="title">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </div>
-            <div class="info">
-              корп. 1, каб. 47
+              {{ lessons.get(day)[lessonNum].info }}
             </div>
           </div>
         </div>

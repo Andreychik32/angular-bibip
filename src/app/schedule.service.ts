@@ -8,6 +8,7 @@ export class ScheduleService {
   private lessons: Map<Day, { [key: number]: Lesson }>;
 
   constructor() {
+    this.lessons = new Map<Day, { [key: number]: Lesson }>();
     this.lessons.set(Day.Monday, {
       2: {
         title: "Дискретні страктури даних",
