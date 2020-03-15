@@ -14,7 +14,7 @@ import { environment } from "../environments/environment";
 @NgModule({
   declarations: [AppComponent, HomePageComponent, HeaderComponent, ToDayPipe],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgxMaskModule.forRoot(),
     FormsModule,
