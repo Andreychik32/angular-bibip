@@ -4,7 +4,7 @@ export interface Lesson {
 }
 
 export enum Day {
-  Monday = 0,
+  Monday = 1,
   Tuesday,
   Wednesday,
   Thursday,

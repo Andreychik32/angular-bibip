@@ -11,6 +11,8 @@ export class HomePageComponent implements OnInit {
   objectKeys = Object.keys;
   parseInt = parseInt;
   lessons: Map<Day, { [key: number]: Lesson }>;
+  selectedDay: Day;
+
   constructor(private scheduleService: ScheduleService) {}
 
   ngOnInit() {
@@ -27,5 +29,13 @@ export class HomePageComponent implements OnInit {
 
   getBells() {
     return this.scheduleService.getBells;
+  }
+
+  selectDay(day: Day) {
+    this.selectedDay = day;
+  }
+
+  get getSelectedDay() {
+    return this.selectedDay;
   }
 }

@@ -1,19 +1,31 @@
 <div class="items">
-  <div class="item" [style.background-color]="'#0884c2'">
-    <span>Первая пара начинается в <strong>4:47</strong></span>
+  <div class="item" [style.background-color]="'#0884c2'" *ngIf="selectedDay">
+    <span
+      >Первая пара начинается в <strong>{{ startEndTime[0] }}</strong></span
+    >
   </div>
-  <div class="item" [style.background-color]="'#aad'">
-    <span>Пары заканчиваются в <strong>8:47</strong></span>
+  <div class="item" [style.background-color]="'#aad'" *ngIf="selectedDay">
+    <span
+      >Пары заканчиваются в <strong>{{ startEndTime[1] }}</strong></span
+    >
   </div>
-  <div class="item" [style.background-color]="'hsl(135, 63%, 33%)'">
+  <div
+    class="item"
+    [style.background-color]="'hsl(135, 63%, 33%)'"
+    *ngIf="selectedDay"
+  >
     <span
       >Если ехать
       <input
         [style.background-color]="'hsl(135, 63%, 24%)'"
         type="text"
-        value="0:15"
-        mask="90:00"
-      />, то выходить из дома в <strong>6:66</strong></span
+        mask="h:m0"
+        [(ngModel)]="time"
+        (ngModelChange)="timeChanged($event)"
+        [dropSpecialCharacters]="false"
+      /><span *ngIf="timeValid"
+        >, то выходить из дома в <strong>{{ timeForTravel }}</strong></span
+      ></span
     >
   </div>
   <div class="item" [style.background-color]="'#ec324e'">

@@ -1,4 +1,4 @@
-@import '../../_variables.scss';
+@import "../../_variables.scss";
 
 .items {
   display: flex;
@@ -11,13 +11,19 @@
 
   .item {
     input {
+      &::-webkit-datetime-edit-ampm-field,
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        display: none;
+      }
       padding: 0.2rem 0.3rem;
       color: #fff;
       border: 0;
       border-radius: 7px;
-      width: 2.7rem;
+      width: 3.3rem;
       text-align: center;
       font-size: medium;
+      text-align: center;
     }
     span {
       text-align: center;

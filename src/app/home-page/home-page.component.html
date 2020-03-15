@@ -1,7 +1,13 @@
-<app-header></app-header>
+<app-header [selectedDay]="getSelectedDay"></app-header>
 <div class="cardz">
   <div class="card-wrp" *ngFor="let day of lessonsDays()">
-    <div class="card">
+    <div
+      class="card"
+      (click)="selectDay(day)"
+      [style.background-color]="
+        selectedDay === day ? 'rgba(149, 68, 255, 0.68)' : ''
+      "
+    >
       <div class="header">
         {{ day | toDay | uppercase }}
       </div>

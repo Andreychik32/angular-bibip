@@ -1,7 +1,7 @@
 @import "../../_variables.scss";
 
 .cardz {
-  padding: 3rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -19,6 +19,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .card {
+    cursor: auto !important;
+  }
   .num {
     font-size: large;
   }
@@ -31,6 +34,7 @@
     padding: 1rem 1.5rem;
     max-width: 20rem;
     min-width: 18rem;
+    cursor: pointer;
     border: 0;
     border-radius: 1.2rem;
     display: flex;
