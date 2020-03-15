@@ -17,21 +17,21 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Дискретні структури даних",
+            title: "Дискретні структури даних (лекція)",
             info: "каб. 230, корп. 15"
           },
           3
         ),
         new Lesson(
           {
-            title: "Теорія ймовірності",
+            title: "Теорія ймовірності (практика)",
             info: "каб. 211, корп. 15"
           },
           4
         ),
         new Lesson(
           {
-            title: "ООП",
+            title: "ООП (практика)",
             info: "каб. 233, корп. 15"
           },
           5
@@ -43,7 +43,7 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Дискретні структури даних",
+            title: "Дискретні структури даних (практика)",
             info: "каб. 224, корп. 15"
           },
           1
@@ -57,18 +57,18 @@ export class ScheduleService {
         ),
         new Lesson(
           {
-            title: "ТВПТ",
+            title: "ТВПТ (практика)",
             info: "каб. 27, корп. 1"
           },
           3,
           {
-            title: "ТВПР",
+            title: "ТВПР (практика)",
             info: "каб. 11, корп. 7"
           }
         ),
         new Lesson(
           {
-            title: "Людинно-машинна взаємодія",
+            title: "Людинно-машинна взаємодія (практика)",
             info: "каб. 224, корп. 15"
           },
           4
@@ -80,14 +80,14 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Бази даних",
+            title: "Бази даних (лекція)",
             info: "каб. 230, корп. 15"
           },
           1
         ),
         new Lesson(
           {
-            title: "Теорія ймовірності",
+            title: "Теорія ймовірності (лекція)",
             info: "каб. 202 корп. 11"
           },
           2
@@ -99,14 +99,14 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Іноземна мова",
+            title: "Іноземна мова (практика)",
             info: "каб. 205, корп. 11"
           },
           2
         ),
         new Lesson(
           {
-            title: "Людинно-машинна взаємодія",
+            title: "Людинно-машинна взаємодія (лекція)",
             info: "каб. 230 корп. 15"
           },
           3
@@ -125,18 +125,18 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "ТВПР",
+            title: "ТВПР (лекція)",
             info: "каб. 4, корп. 7"
           },
           1,
           {
-            title: "ТВПТ",
+            title: "ТВПТ (лекція)",
             info: "каб. 87, корп. 1"
           }
         ),
         new Lesson(
           {
-            title: "ООП",
+            title: "ООП (лекція)",
             info: "каб. 231 корп. 15"
           },
           2
