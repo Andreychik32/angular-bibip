@@ -4,7 +4,7 @@ export interface LessonType {
 }
 
 export const getCurrentWeek = (): Week => {
-  const instance = new Date(2020, 2, 16, 0, 0, 0, 0);
+  const instance = new Date();
 
   // Create a copy of this date object
   const target = new Date(instance.valueOf());
