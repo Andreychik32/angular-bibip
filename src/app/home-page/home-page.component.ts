@@ -35,7 +35,7 @@ export class HomePageComponent {
       },
       {
         name: "og:image",
-        content: "https://bibip.haxellio.me/assets/icons/icon-512x512.png"
+        content: "https://bibip.haxellio.me/assets/icons/icon-192x192.png"
       },
 
       { name: "twitter:card", content: "summary_large_image" },
@@ -47,7 +47,7 @@ export class HomePageComponent {
       },
       {
         name: "twitter:image",
-        content: "https://bibip.haxellio.me/assets/icons/icon-512x512.png"
+        content: "https://bibip.haxellio.me/assets/icons/icon-192x192.png"
       }
     ]);
   }
