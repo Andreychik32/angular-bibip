@@ -1,12 +1,12 @@
 <div class="items">
   <div class="item" [style.background-color]="'#0884c2'" *ngIf="selectedDay">
     <span
-      >Первая пара начинается в <strong>{{ startEndTime[0] }}</strong></span
+      >Перша пара починається в <strong>{{ startEndTime[0] }}</strong></span
     >
   </div>
   <div class="item" [style.background-color]="'#aad'" *ngIf="selectedDay">
     <span
-      >Пары заканчиваются в <strong>{{ startEndTime[1] }}</strong></span
+      >Пари закінчуються в <strong>{{ startEndTime[1] }}</strong></span
     >
   </div>
   <div
@@ -15,7 +15,7 @@
     *ngIf="selectedDay"
   >
     <span
-      >Если ехать
+      >Якщо їхати
       <input
         [style.background-color]="'hsl(135, 63%, 24%)'"
         type="text"
@@ -24,11 +24,11 @@
         (ngModelChange)="timeChanged($event)"
         [dropSpecialCharacters]="false"
       /><span *ngIf="timeValid"
-        >, то выходить из дома в <strong>{{ timeForTravel }}</strong></span
+        >, то виходити з дому в <strong>{{ timeForTravel }}</strong></span
       ></span
     >
   </div>
   <div class="item" [style.background-color]="'#ec324e'">
-    <span>Сейчас <strong>мм</strong> неделя</span>
+    <span>Зараз <strong>мм</strong> тиждень</span>
   </div>
 </div>
