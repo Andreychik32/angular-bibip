@@ -16,4 +16,16 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.lessons = this.scheduleService.getLessons;
   }
+
+  lessonsDays() {
+    return Array.from(this.lessons.keys());
+  }
+
+  lessonsKeys(day: Day) {
+    return Array.from(Object.keys(this.lessons.get(day)));
+  }
+
+  getBells() {
+    return this.scheduleService.getBells;
+  }
 }
