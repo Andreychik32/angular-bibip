@@ -29,6 +29,14 @@
     >
   </div>
   <div class="item" [style.background-color]="'#ec324e'">
-    <span>Зараз <strong>мм</strong> тиждень</span>
+    <span style="padding-right: 0.7rem;"
+      >Зараз {{ !weekCheckbox ? "чисельник" : "знаменник" }}</span
+    >
+    <input
+      [(ngModel)]="weekCheckbox"
+      (ngModelChange)="weekChanged($event)"
+      type="checkbox"
+      id="switch"
+    /><label for="switch">Toggle</label>
   </div>
 </div>

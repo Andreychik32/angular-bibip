@@ -1,6 +1,6 @@
 <app-header [selectedDay]="getSelectedDay"></app-header>
 <div class="cardz">
-  <div class="card-wrp" *ngFor="let day of lessonsDays()">
+  <div class="card-wrp" *ngFor="let day of getLessonDays()">
     <div
       class="card"
       (click)="selectDay(day)"
@@ -12,16 +12,16 @@
         {{ day | toDay | uppercase }}
       </div>
       <div class="items">
-        <div class="item" *ngFor="let lessonNum of lessonsKeys(day)">
+        <div class="item" *ngFor="let lesson of lessons.get(day)">
           <div class="num">
-            {{ parseInt(lessonNum) + 1 }}
+            {{ lesson.num }}
           </div>
           <div class="content">
             <div class="title">
-              {{ lessons.get(day)[lessonNum].title }}
+              {{ getLessonDataBySelectedWeek(lesson).title }}
             </div>
             <div class="info">
-              {{ lessons.get(day)[lessonNum].info }}
+              {{ getLessonDataBySelectedWeek(lesson).info }}
             </div>
           </div>
         </div>

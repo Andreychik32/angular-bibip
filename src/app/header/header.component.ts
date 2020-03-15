@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Day } from "../custom-types";
+import { Day, getCurrentWeek, Week } from "../custom-types";
 import { ScheduleService } from "../schedule.service";
 
 @Component({
@@ -8,27 +8,55 @@ import { ScheduleService } from "../schedule.service";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
-  @Input() time: string;
-  @Input() selectedDay: Day;
+  @Input() time = "1:00";
+  // tslint:disable-next-line: variable-name
+  private _selectedDay: Day;
   timeForTravel: string;
+  @Input() weekCheckbox = false;
 
-  constructor(private scheduleService: ScheduleService) {}
+  @Input()
+  set selectedDay(day: Day) {
+    this._selectedDay = day;
+    if (this._selectedDay) {
+      this.calculateTime();
+    }
+  }
+  get selectedDay(): Day {
+    return this._selectedDay;
+  }
 
-  timeChanged(newTime: string) {
+  constructor(private scheduleService: ScheduleService) {
+    this.weekCheckbox = getCurrentWeek() === Week.Even ? true : false;
+  }
+
+  weekChanged(newWeek: boolean) {
+    this.scheduleService.currentWeek = newWeek ? Week.Even : Week.Odd;
+  }
+
+  private calculateTime() {
     if (this.timeValid) {
       const travelDuration =
-        parseInt(newTime.split(":")[0], 10) * 60 * 60 +
-        parseInt(newTime.split(":")[1], 10) * 60;
+        parseInt(this.time.split(":")[0], 10) * 60 * 60 +
+        parseInt(this.time.split(":")[1], 10) * 60;
       const lessonsStartTime = new Date();
 
       lessonsStartTime.setHours(
         parseInt(this.startEndTime[0].split(":")[0], 10),
         parseInt(this.startEndTime[0].split(":")[1], 10)
       );
-      const travelStartTime = new Date(Math.abs(lessonsStartTime.getTime() - travelDuration * 1000));
+      const travelStartTime = new Date(
+        Math.abs(lessonsStartTime.getTime() - travelDuration * 1000)
+      );
 
-      this.timeForTravel = `${travelStartTime.getHours()}:${travelStartTime.getMinutes()}`;
+      this.timeForTravel = `${travelStartTime.getHours()}:${travelStartTime
+        .getMinutes()
+        .toString()
+        .padStart(2, "0")}`;
     }
+  }
+
+  timeChanged(newTime: string) {
+    this.calculateTime();
   }
 
   get timeValid(): boolean {
@@ -41,14 +69,11 @@ export class HeaderComponent {
   get startEndTime(): [string, string] {
     const lessons = this.scheduleService.getLessons.get(this.selectedDay);
 
-    const lessonsKeys = Object.keys(lessons);
-    const firstLessonIndex = lessonsKeys[0];
-    const lastLessonIndex = lessonsKeys[lessonsKeys.length - 1];
     return [
-      (this.scheduleService.getBells[firstLessonIndex] as string).split(
+      this.scheduleService.getBells[lessons[0].num - 1].split(" - ")[0],
+      this.scheduleService.getBells[lessons[lessons.length - 1].num - 1].split(
         " - "
-      )[0],
-      (this.scheduleService.getBells[lastLessonIndex] as string).split(" - ")[1]
+      )[1]
     ];
   }
 }

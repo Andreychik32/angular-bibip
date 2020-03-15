@@ -1,81 +1,148 @@
 import { Injectable } from "@angular/core";
-import { Lesson, Day } from "./custom-types";
+import { LessonType, Day, Lesson, Week, getCurrentWeek } from "./custom-types";
 
 @Injectable({
   providedIn: "root"
 })
 export class ScheduleService {
-  private lessons: Map<Day, { [key: number]: Lesson }>;
+  private lessons: Map<Day, Array<Lesson>>;
   private bells: Array<string>;
+  currentWeek: Week;
 
   constructor() {
-    this.lessons = new Map<Day, { [key: number]: Lesson }>();
-    this.lessons.set(Day.Monday, {
-      2: {
-        title: "Дискретні структури даних",
-        info: "каб. 230, корп. 15"
-      },
-      3: {
-        title: "Теорія ймовірності",
-        info: "каб. 211, корп. 15"
-      },
-      4: {
-        title: "ООП",
-        info: "каб. 233, корп. 15"
-      }
-    });
-    this.lessons.set(Day.Tuesday, {
-      0: {
-        title: "Дискретні страктури даних",
-        info: "каб. 224, корп. 15"
-      },
-      1: {
-        title: "Фізичне виховання",
-        info: "корп. 8"
-      },
-      2: {
-        title: "ТВПТ ТВПТР",
-        info: "каб. 27 / 11, корп. 1 / 7"
-      },
-      3: {
-        title: "Людинно-машинна взаємодія",
-        info: "каб. 224, корп. 15"
-      }
-    });
-    this.lessons.set(Day.Wednesday, {
-      0: {
-        title: "Бази даних",
-        info: "каб. 231, корп. 15"
-      },
-      1: {
-        title: "Теорія ймовірності",
-        info: "каб. 202 корп. 11"
-      }
-    });
-    this.lessons.set(Day.Thursday, {
-      1: {
-        title: "Англійська мова",
-        info: "каб. 205, корп. 11"
-      },
-      2: {
-        title: "Людинно-машинна взаємодія",
-        info: "каб. 231 корп. 15"
-      },
-      3: {
-        title: "Бази даних (практика)",
-        info: "каб. 213 корп. 15"
-      }
-    });
-    this.lessons.set(Day.Friday, {
-      0: {
-        title: "ТВПТ / ТВПТР",
-        info: "каб. 4 / 87, корп. 7 / 1"
-      },
-      1: {
-        title: "ООП",
-        info: "каб. 231 корп. 15"
-      }
-    });
+    this.currentWeek = getCurrentWeek();
+    this.lessons = new Map<Day, Array<Lesson>>();
+    this.lessons.set(
+      Day.Monday,
+      new Array<Lesson>(
+        new Lesson(
+          {
+            title: "Дискретні структури даних",
+            info: "каб. 230, корп. 15"
+          },
+          3
+        ),
+        new Lesson(
+          {
+            title: "Теорія ймовірності",
+            info: "каб. 211, корп. 15"
+          },
+          4
+        ),
+        new Lesson(
+          {
+            title: "ООП",
+            info: "каб. 233, корп. 15"
+          },
+          5
+        )
+      )
+    );
+    this.lessons.set(
+      Day.Tuesday,
+      new Array<Lesson>(
+        new Lesson(
+          {
+            title: "Дискретні структури даних",
+            info: "каб. 224, корп. 15"
+          },
+          1
+        ),
+        new Lesson(
+          {
+            title: "Фізичне виховання",
+            info: "корп. 8"
+          },
+          2
+        ),
+        new Lesson(
+          {
+            title: "ТВПТ",
+            info: "каб. 27, корп. 1"
+          },
+          3,
+          {
+            title: "ТВПР",
+            info: "каб. 11, корп. 7"
+          }
+        ),
+        new Lesson(
+          {
+            title: "Людинно-машинна взаємодія",
+            info: "каб. 224, корп. 15"
+          },
+          4
+        )
+      )
+    );
+    this.lessons.set(
+      Day.Wednesday,
+      new Array<Lesson>(
+        new Lesson(
+          {
+            title: "Бази даних",
+            info: "каб. 230, корп. 15"
+          },
+          1
+        ),
+        new Lesson(
+          {
+            title: "Теорія ймовірності",
+            info: "каб. 202 корп. 11"
+          },
+          2
+        )
+      )
+    );
+    this.lessons.set(
+      Day.Thursday,
+      new Array<Lesson>(
+        new Lesson(
+          {
+            title: "Іноземна мова",
+            info: "каб. 205, корп. 11"
+          },
+          2
+        ),
+        new Lesson(
+          {
+            title: "Людинно-машинна взаємодія",
+            info: "каб. 230 корп. 15"
+          },
+          3
+        ),
+        new Lesson(
+          {
+            title: "Бази даних (практика)",
+            info: "каб. 213 корп. 15"
+          },
+          4
+        )
+      )
+    );
+    this.lessons.set(
+      Day.Friday,
+      new Array<Lesson>(
+        new Lesson(
+          {
+            title: "ТВПР",
+            info: "каб. 4, корп. 7"
+          },
+          1,
+          {
+            title: "ТВПТ",
+            info: "каб. 87, корп. 1"
+          }
+        ),
+        new Lesson(
+          {
+            title: "ООП",
+            info: "каб. 231 корп. 15"
+          },
+          2
+        )
+      )
+    );
 
     this.bells = new Array<string>(
       "8:30 - 9:50",
@@ -87,6 +154,18 @@ export class ScheduleService {
       "18:00 - 19:20",
       "19:35 - 20:55"
     );
+  }
+
+  getLessonDataByWeek(lesson: Lesson): LessonType {
+    if (lesson.secondLesson) {
+      if (this.currentWeek === Week.Odd) {
+        return lesson.firstLesson;
+      } else {
+        return lesson.secondLesson;
+      }
+    } else {
+      return lesson.firstLesson;
+    }
   }
 
   get getLessons() {

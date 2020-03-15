@@ -1,30 +1,33 @@
 import { Component, OnInit } from "@angular/core";
 import { ScheduleService } from "../schedule.service";
-import { Day, Lesson } from "../custom-types";
+import { Day, LessonType, Lesson } from "../custom-types";
 
 @Component({
   selector: "app-home-page",
   templateUrl: "./home-page.component.html",
   styleUrls: ["./home-page.component.scss"]
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent {
   objectKeys = Object.keys;
   parseInt = parseInt;
-  lessons: Map<Day, { [key: number]: Lesson }>;
   selectedDay: Day;
 
   constructor(private scheduleService: ScheduleService) {}
 
-  ngOnInit() {
-    this.lessons = this.scheduleService.getLessons;
+  get lessons() {
+    return this.scheduleService.getLessons;
   }
 
-  lessonsDays() {
+  getLessonDays() {
     return Array.from(this.lessons.keys());
   }
 
-  lessonsKeys(day: Day) {
-    return Array.from(Object.keys(this.lessons.get(day)));
+  getLessonDataBySelectedWeek(lesson: Lesson) {
+    return this.scheduleService.getLessonDataByWeek(lesson);
+  }
+
+  getLessonsByDay(day: Day) {
+    return this.lessons.get(day);
   }
 
   getBells() {
