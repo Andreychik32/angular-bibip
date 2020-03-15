@@ -1,4 +1,4 @@
-@import '../../_variables.scss';
+@import "../../_variables.scss";
 
 .cardz {
   padding: 3rem 0;
@@ -25,16 +25,20 @@
 }
 
 .card-wrp {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   max-width: max-content;
   .card {
     padding: 1rem 1.5rem;
     max-width: 20rem;
     border: 0;
+    border-radius: 1.2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: lightgray;
+    background-color: rgb(255, 187, 78);
+    color: rgb(0, 32, 100);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12) !important;
     .header {
       padding: 0 0 0.5rem 0;
       font-weight: bold;

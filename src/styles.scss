@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~normalize.css';
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 
 * {
   margin: 0;
@@ -14,5 +14,13 @@
 .app-root {
   min-height: 100vh;
   min-width: 100vw;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(229, 229, 229, 0.9) 40%,
+    rgba(200, 200, 200, 0.9) 100%
+  );
 }
