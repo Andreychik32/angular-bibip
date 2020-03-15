@@ -16,12 +16,23 @@ export class HeaderComponent {
 
   timeChanged(newTime: string) {
     if (this.timeValid) {
-      this.timeForTravel = "4:77";
+      const travelDuration =
+        parseInt(newTime.split(":")[0], 10) * 60 * 60 +
+        parseInt(newTime.split(":")[1], 10) * 60;
+      const lessonsStartTime = new Date();
+
+      lessonsStartTime.setHours(
+        parseInt(this.startEndTime[0].split(":")[0], 10),
+        parseInt(this.startEndTime[0].split(":")[1], 10)
+      );
+      const travelStartTime = new Date(Math.abs(lessonsStartTime.getTime() - travelDuration * 1000));
+
+      this.timeForTravel = `${travelStartTime.getHours()}:${travelStartTime.getMinutes()}`;
     }
   }
 
   get timeValid(): boolean {
-    if (this.time.length === 4) {
+    if (this.time && this.time.length === 4) {
       return true;
     }
     return false;
