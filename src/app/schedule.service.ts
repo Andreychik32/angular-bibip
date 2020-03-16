@@ -158,7 +158,7 @@ export class ScheduleService {
 
   getLessonDataByWeek(lesson: Lesson): LessonType {
     if (lesson.secondLesson) {
-      if (this.currentWeek === Week.Odd) {
+      if (this.currentWeek === Week.Even) {
         return lesson.firstLesson;
       } else {
         return lesson.secondLesson;
