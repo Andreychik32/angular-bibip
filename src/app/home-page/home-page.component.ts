@@ -11,8 +11,15 @@ export class HomePageComponent {
   objectKeys = Object.keys;
   parseInt = parseInt;
   selectedDay: Day;
+  currentDate: Date;
 
-  constructor(private scheduleService: ScheduleService) {}
+  constructor(private scheduleService: ScheduleService) {
+    this.currentDate = new Date();
+    const day = this.currentDate.getDay();
+    if (![6, 7].includes(day)) {
+      this.selectDay(day);
+    }
+  }
 
   get lessons() {
     return this.scheduleService.getLessons;
