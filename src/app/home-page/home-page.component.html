@@ -5,7 +5,11 @@
       class="card"
       (click)="selectDay(day)"
       [style.background-color]="
-        selectedDay === day ? 'rgba(255, 223, 68, 0.35)' : day === currentDate.getDay() ? 'rgba(0, 43, 255, 0.45)' : ''
+        selectedDay === day
+          ? '#e7e9ff'
+          : day === currentDate.getDay()
+          ? '#fff1fe'
+          : ''
       "
     >
       <div class="header">
@@ -23,6 +27,7 @@
             <div class="info">
               {{ getLessonDataBySelectedWeek(lesson).info }}
             </div>
+            <div class="info time">{{ getBells()[lesson.num - 1] }}</div>
           </div>
         </div>
       </div>
