@@ -17,17 +17,21 @@
       </div>
       <div class="items">
         <div class="item" *ngFor="let lesson of lessons.get(day)">
-          <div class="num">
-            {{ lesson.num }}
-          </div>
-          <div class="content">
-            <div class="title">
-              {{ getLessonDataBySelectedWeek(lesson).title }}
+          <div *ngIf="getLessonDataBySelectedWeek(lesson).title != ''">
+            <div class="num">
+              {{ lesson.num }}
             </div>
-            <div class="info">
-              {{ getLessonDataBySelectedWeek(lesson).info }}
+            <div class="content">
+              <div
+                class="title"
+                [innerHTML]="getLessonDataBySelectedWeek(lesson).title"
+              ></div>
+              <div
+                class="info"
+                [innerHTML]="getLessonDataBySelectedWeek(lesson).info"
+              ></div>
+              <div class="info time">{{ getBells()[lesson.num - 1] }}</div>
             </div>
-            <div class="info time">{{ getBells()[lesson.num - 1] }}</div>
           </div>
         </div>
       </div>

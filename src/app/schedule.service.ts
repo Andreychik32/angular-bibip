@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { LessonType, Day, Lesson, Week, getCurrentWeek } from "./custom-types";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class ScheduleService {
   private lessons: Map<Day, Array<Lesson>>;
@@ -17,22 +17,37 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Дискретні структури даних (лекція)",
-            info: "каб. 230, корп. 15"
+            title: "Матем. статис.",
+            info: "каб. 206, корп. 15",
+          },
+          2,
+          {
+            title: "",
+            info: "",
+          }
+        ),
+        new Lesson(
+          {
+            title: "За вибором:<br />Аналітика з R /<br /> Інтелект. системи",
+            info: "каб. 230, корп. 15 /<br /> каб. 232 к. 15",
           },
           3
         ),
         new Lesson(
           {
-            title: "Теорія ймовірності (практика)",
-            info: "каб. 211, корп. 15"
+            title: "Менеджмент",
+            info: "каб. 232, корп. 15",
           },
-          4
+          4,
+          {
+            title: "",
+            info: "",
+          }
         ),
         new Lesson(
           {
-            title: "ООП (практика)",
-            info: "каб. 233, корп. 15"
+            title: "Операційні системи",
+            info: "каб. 213, корп. 15",
           },
           5
         )
@@ -43,35 +58,28 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Дискретні структури даних (практика)",
-            info: "каб. 224, корп. 15"
+            title: "Філософія",
+            info: "дистанційно",
           },
           1
         ),
         new Lesson(
           {
-            title: "Фізичне виховання",
-            info: "корп. 8"
+            title: "Аналіз вимог до ПЗ",
+            info: "дистанційно",
           },
           2
         ),
         new Lesson(
           {
-            title: "ТВПТ (практика)",
-            info: "каб. 27, корп. 1"
+            title: "Менеджмент",
+            info: "дистанційно",
           },
           3,
           {
-            title: "ТВПР (практика)",
-            info: "каб. 11, корп. 7"
+            title: "",
+            info: "",
           }
-        ),
-        new Lesson(
-          {
-            title: "Людинно-машинна взаємодія (практика)",
-            info: "каб. 224, корп. 15"
-          },
-          4
         )
       )
     );
@@ -80,17 +88,24 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Бази даних (лекція)",
-            info: "каб. 230, корп. 15"
+            title: "За вибором:<br />Інтел. системи",
+            info: "каб. 233, корп. 15",
           },
-          1
+          4
         ),
         new Lesson(
           {
-            title: "Теорія ймовірності (лекція)",
-            info: "каб. 202 корп. 11"
+            title: "Філософія",
+            info: "каб. 233 корп. 15",
           },
-          2
+          5
+        ),
+        new Lesson(
+          {
+            title: "Крос-платформ. програмування",
+            info: "каб. 233 корп. 15",
+          },
+          6
         )
       )
     );
@@ -99,24 +114,28 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Іноземна мова (практика)",
-            info: "каб. 205, корп. 11"
+            title: "Крос-платформ. програмування",
+            info: "дистанційно",
           },
           2
         ),
         new Lesson(
           {
-            title: "Людинно-машинна взаємодія (лекція)",
-            info: "каб. 230 корп. 15"
+            title: "Математична статистика",
+            info: "дистанційно",
           },
-          3
+          3,
+          {
+            title: "Веб-технології та дизайн",
+            info: "дистанційно",
+          }
         ),
         new Lesson(
           {
-            title: "Бази даних (практика)",
-            info: "каб. 213 корп. 15"
+            title: "Операційні системи",
+            info: "дистанційно",
           },
-          4
+          5
         )
       )
     );
@@ -125,21 +144,28 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "ТВПР (лекція)",
-            info: "каб. 4, корп. 7"
+            title: "",
+            info: "",
           },
-          1,
+          2,
           {
-            title: "ТВПТ (лекція)",
-            info: "каб. 87, корп. 1"
+            title: "Веб-технології та дизайн",
+            info: "каб. 211, корп. 15",
           }
         ),
         new Lesson(
           {
-            title: "ООП (лекція)",
-            info: "каб. 231 корп. 15"
+            title: "Аналіз вимог",
+            info: "каб. 211 корп. 15",
           },
-          2
+          3
+        ),
+        new Lesson(
+          {
+            title: "Крос-платформ. програмування",
+            info: "каб. 211 корп. 15",
+          },
+          4
         )
       )
     );
@@ -148,11 +174,10 @@ export class ScheduleService {
       "8:30 - 9:50",
       "10:05 - 11:25",
       "11:40 - 13:00",
-      "13:15 - 14:35",
-      "14:50 - 16:10",
-      "16:25 - 17:45",
-      "18:00 - 19:20",
-      "19:35 - 20:55"
+      "14:00 - 15:20",
+      "15:35 - 16:55",
+      "17:10 - 18:30",
+      "18:45 - 20:05"
     );
   }
 

@@ -33,7 +33,7 @@ export const getCurrentWeek = (): Week => {
   // first thursday of the year and the thursday in the target week
   const weekNumber =
     1 + Math.ceil((firstThursday - target.getTime()) / 604800000);
-  return weekNumber % 2 === 0 ? Week.Even : Week.Odd;
+  return weekNumber % 2 !== 0 ? Week.Even : Week.Odd;
 };
 
 export class Lesson {
