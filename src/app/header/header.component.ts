@@ -5,7 +5,7 @@ import { ScheduleService } from "../schedule.service";
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
   @Input() time = "1:00";
@@ -31,6 +31,7 @@ export class HeaderComponent {
 
   weekChanged(newWeek: boolean) {
     this.scheduleService.currentWeek = newWeek ? Week.Even : Week.Odd;
+    this.calculateTime();
   }
 
   private calculateTime() {
@@ -69,11 +70,15 @@ export class HeaderComponent {
   get startEndTime(): [string, string] {
     const lessons = this.scheduleService.getLessons.get(this.selectedDay);
 
+    const lessonsByWeek = lessons.filter(
+      (lsn) => this.scheduleService.getLessonDataByWeek(lsn).title !== ""
+    );
+
     return [
-      this.scheduleService.getBells[lessons[0].num - 1].split(" - ")[0],
-      this.scheduleService.getBells[lessons[lessons.length - 1].num - 1].split(
-        " - "
-      )[1]
+      this.scheduleService.getBells[lessonsByWeek[0].num - 1].split(" - ")[0],
+      this.scheduleService.getBells[
+        lessonsByWeek[lessonsByWeek.length - 1].num - 1
+      ].split(" - ")[1],
     ];
   }
 }
