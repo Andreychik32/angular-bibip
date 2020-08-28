@@ -17,31 +17,27 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Матем. статис.",
-            info: "каб. 206, корп. 15",
+            title: "За вибором:<br />Аналітика з R",
+            info: "каб. 222, корп. 15",
           },
-          2,
-          {
-            title: "",
-            info: "",
-          }
+          2
         ),
         new Lesson(
           {
-            title: "За вибором:<br />Аналітика з R /<br /> Інтелект. системи",
-            info: "каб. 230, корп. 15 /<br /> каб. 232 к. 15",
+            title: "За вибором:<br />Інтелектуальні системи",
+            info: "каб. 232, корп. 15",
           },
           3
         ),
         new Lesson(
           {
-            title: "Менеджмент",
-            info: "каб. 232, корп. 15",
+            title: "За вибором:<br />Менеджмент",
+            info: "каб. 230, корп. 15",
           },
           4,
           {
-            title: "",
-            info: "",
+            title: "За вибором:<br />Технічні засоби передачі інформації",
+            info: "каб. 230, корп. 15",
           }
         ),
         new Lesson(
@@ -72,7 +68,7 @@ export class ScheduleService {
         ),
         new Lesson(
           {
-            title: "Менеджмент",
+            title: "За вибором:<br />Менеджмент",
             info: "дистанційно",
           },
           3,
@@ -88,7 +84,18 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "За вибором:<br />Інтел. системи",
+            title: "",
+            info: "",
+          },
+          3,
+          {
+            title: "За вибором:<br />Технічні засоби передачі інформації",
+            info: "каб. 206, корп. 15",
+          }
+        ),
+        new Lesson(
+          {
+            title: "За вибором:<br />Інтелектуальні системи",
             info: "каб. 233, корп. 15",
           },
           4
@@ -112,6 +119,13 @@ export class ScheduleService {
     this.lessons.set(
       Day.Thursday,
       new Array<Lesson>(
+        new Lesson(
+          {
+            title: "За вибором:<br />Аналітика з R",
+            info: "дистанційно",
+          },
+          1
+        ),
         new Lesson(
           {
             title: "Крос-платформ. програмування",
@@ -144,8 +158,8 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "",
-            info: "",
+            title: "Математична статистика",
+            info: "каб. 211, к. 15",
           },
           2,
           {
@@ -155,17 +169,10 @@ export class ScheduleService {
         ),
         new Lesson(
           {
-            title: "Аналіз вимог",
+            title: "Аналіз вимог до ПЗ",
             info: "каб. 211 корп. 15",
           },
           3
-        ),
-        new Lesson(
-          {
-            title: "Крос-платформ. програмування",
-            info: "каб. 211 корп. 15",
-          },
-          4
         )
       )
     );
@@ -182,6 +189,18 @@ export class ScheduleService {
   }
 
   getLessonDataByWeek(lesson: Lesson): LessonType {
+    if (lesson.secondLesson) {
+      if (this.currentWeek === Week.Even) {
+        return lesson.firstLesson;
+      } else {
+        return lesson.secondLesson;
+      }
+    } else {
+      return lesson.firstLesson;
+    }
+  }
+
+  getLessonByWeek(lesson: Lesson): LessonType {
     if (lesson.secondLesson) {
       if (this.currentWeek === Week.Even) {
         return lesson.firstLesson;
