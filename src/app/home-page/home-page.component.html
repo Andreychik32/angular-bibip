@@ -18,7 +18,7 @@
       <div class="items">
         <div class="item" *ngFor="let lesson of lessons.get(day)">
           <div *ngIf="getLessonDataBySelectedWeek(lesson).title != ''">
-            <div class="num">
+            <div class="num" *ngIf="lesson.num != 0">
               {{ lesson.num }}
             </div>
             <div class="content">

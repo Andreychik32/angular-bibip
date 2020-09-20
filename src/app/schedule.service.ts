@@ -17,33 +17,38 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "За вибором:<br />Аналітика з R",
-            info: "каб. 222, корп. 15",
+            title: "Математична статистика",
+            info: "Discord",
           },
-          2
+          2,
+          {
+            title: "За вибором:<br />Менеджмент",
+            info: "Zoom",
+          }
         ),
         new Lesson(
           {
-            title: "За вибором:<br />Інтелектуальні системи",
-            info: "каб. 232, корп. 15",
+            title:
+              "За вибором:<br />Аналітика з R/<br />Інтелектуальні системи",
+            info: "Google Meet/Discord",
           },
           3
         ),
         new Lesson(
           {
-            title: "За вибором:<br />Менеджмент",
-            info: "каб. 230, корп. 15",
+            title: "Математична статистика",
+            info: "Discord",
           },
           4,
           {
-            title: "За вибором:<br />Технічні засоби передачі інформації",
-            info: "каб. 230, корп. 15",
+            title: "За вибором:<br />Менеджмент",
+            info: "Zoom",
           }
         ),
         new Lesson(
           {
             title: "Операційні системи",
-            info: "каб. 213, корп. 15",
+            info: "дистанційно",
           },
           5
         )
@@ -55,27 +60,23 @@ export class ScheduleService {
         new Lesson(
           {
             title: "Філософія",
-            info: "дистанційно",
+            info: "перезараховано",
           },
           1
         ),
         new Lesson(
           {
-            title: "Аналіз вимог до ПЗ",
+            title: "Операційні системи",
             info: "дистанційно",
           },
           2
         ),
         new Lesson(
           {
-            title: "За вибором:<br />Менеджмент",
-            info: "дистанційно",
+            title: "За вибором:<br />Інтелектуальні системи",
+            info: "Discord",
           },
-          3,
-          {
-            title: "",
-            info: "",
-          }
+          3
         )
       )
     );
@@ -84,33 +85,22 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "",
-            info: "",
-          },
-          3,
-          {
-            title: "За вибором:<br />Технічні засоби передачі інформації",
-            info: "каб. 206, корп. 15",
-          }
-        ),
-        new Lesson(
-          {
-            title: "За вибором:<br />Інтелектуальні системи",
-            info: "каб. 233, корп. 15",
+            title: "Аналіз вимог до ПЗ",
+            info: "Discord",
           },
           4
         ),
         new Lesson(
           {
             title: "Філософія",
-            info: "каб. 233 корп. 15",
+            info: "перезараховано",
           },
           5
         ),
         new Lesson(
           {
-            title: "Крос-платформ. програмування",
-            info: "каб. 233 корп. 15",
+            title: "За вибором:<br />Крос-платформ. програмування",
+            info: "дистанційно",
           },
           6
         )
@@ -121,35 +111,31 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "За вибором:<br />Аналітика з R",
-            info: "дистанційно",
+            title: "Владимир Путин",
+            info: "молодец",
           },
           1
         ),
         new Lesson(
           {
-            title: "Крос-платформ. програмування",
-            info: "дистанційно",
+            title: "Владимир Путин",
+            info: "молодец",
           },
           2
         ),
         new Lesson(
           {
-            title: "Математична статистика",
-            info: "дистанційно",
+            title: "Владимир Путин",
+            info: "молодец",
           },
-          3,
-          {
-            title: "Веб-технології та дизайн",
-            info: "дистанційно",
-          }
+          3
         ),
         new Lesson(
           {
-            title: "Операційні системи",
-            info: "дистанційно",
+            title: "Владимир Путин",
+            info: "молодец",
           },
-          5
+          4
         )
       )
     );
@@ -158,21 +144,39 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Математична статистика",
-            info: "каб. 211, к. 15",
+            title: "За вибором:<br />Крос-платформ. програмування",
+            info: "дистанційно",
+          },
+          1
+        ),
+        new Lesson(
+          {
+            title: "",
+            info: "",
           },
           2,
           {
             title: "Веб-технології та дизайн",
-            info: "каб. 211, корп. 15",
+            info: "дистанційно",
           }
         ),
         new Lesson(
           {
             title: "Аналіз вимог до ПЗ",
-            info: "каб. 211 корп. 15",
+            info: "Discord",
           },
           3
+        ),
+        new Lesson(
+          {
+            title: "",
+            info: "",
+          },
+          4,
+          {
+            title: "Веб-технології та дизайн",
+            info: "дистанційно",
+          }
         )
       )
     );
