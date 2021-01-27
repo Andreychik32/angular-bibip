@@ -17,40 +17,18 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Математична статистика",
-            info: "Discord",
+            title: "Програмування мобільних пристроїв",
+            info: "223 к.15",
           },
-          2,
-          {
-            title: "За вибором:<br />Менеджмент",
-            info: "Zoom",
-          }
+          1
         ),
         new Lesson(
           {
             title:
-              "За вибором:<br />Аналітика з R/<br />Інтелектуальні системи",
-            info: "Google Meet/Discord",
+              "Моделювання та аналіз предметної області",
+            info: "223 к.15",
           },
-          3
-        ),
-        new Lesson(
-          {
-            title: "Математична статистика",
-            info: "Discord",
-          },
-          4,
-          {
-            title: "За вибором:<br />Менеджмент",
-            info: "Zoom",
-          }
-        ),
-        new Lesson(
-          {
-            title: "Операційні системи",
-            info: "дистанційно",
-          },
-          5
+          2
         )
       )
     );
@@ -59,24 +37,28 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Філософія",
-            info: "перезараховано",
+            title: "Конструювання програмного забезпечення",
+            info: "222 к.15",
           },
-          1
+          5
         ),
         new Lesson(
           {
-            title: "Операційні системи",
-            info: "дистанційно",
+            title: "Комп'ютерні мережі",
+            info: "214 к.15",
           },
-          2
+          6
         ),
         new Lesson(
           {
-            title: "За вибором:<br />Інтелектуальні системи",
-            info: "Discord",
+            title: "",
+            info: "",
           },
-          3
+          7,
+          {
+            title: "Технологія програмування баз даних",
+            info: "214 к.15",
+          }
         )
       )
     );
@@ -85,24 +67,28 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Аналіз вимог до ПЗ",
-            info: "Discord",
+            title: "Технологія веб-програмування",
+            info: "230 к.15",
           },
           4
         ),
         new Lesson(
           {
-            title: "Філософія",
-            info: "перезараховано",
+            title: "Комп'ютерні мережі",
+            info: "230 к.15",
           },
           5
         ),
         new Lesson(
           {
-            title: "За вибором:<br />Крос-платформ. програмування",
-            info: "дистанційно",
+            title: "Правова культура особистості",
+            info: "230 к.15",
           },
-          6
+          6,
+          {
+            title: "Економіка і бізнес",
+            info: "230 к.15",
+          }
         )
       )
     );
@@ -111,31 +97,35 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Владимир Путин",
-            info: "молодец",
-          },
-          1
-        ),
-        new Lesson(
-          {
-            title: "Владимир Путин",
-            info: "молодец",
-          },
-          2
-        ),
-        new Lesson(
-          {
-            title: "Владимир Путин",
-            info: "молодец",
-          },
-          3
-        ),
-        new Lesson(
-          {
-            title: "Владимир Путин",
-            info: "молодец",
+            title: "Моделювання та аналіз предметної області",
+            info: "230 к.15",
           },
           4
+        ),
+        new Lesson(
+          {
+            title: "Програмування мобільних пристроїв",
+            info: "230 к.15",
+          },
+          5
+        ),
+        new Lesson(
+          {
+            title: "Конструювання програмного забезпечення",
+            info: "230 к.15",
+          },
+          6
+        ),
+        new Lesson(
+          {
+            title: "Технологія програмування баз даних ",
+            info: "230 к.15",
+          },
+          7,
+          {
+            title: "",
+            info: "",
+          }
         )
       )
     );
@@ -144,39 +134,21 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "За вибором:<br />Крос-платформ. програмування",
-            info: "дистанційно",
+            title: "Правова культура особистості",
+            info: "105 к.1",
           },
-          1
-        ),
-        new Lesson(
+          3,
           {
-            title: "",
-            info: "",
-          },
-          2,
-          {
-            title: "Веб-технології та дизайн",
-            info: "дистанційно",
+            title: "Економіка і бізнес",
+            info: "211 к.15",
           }
         ),
         new Lesson(
           {
-            title: "Аналіз вимог до ПЗ",
-            info: "Discord",
+            title: "Технологія веб-програмування ",
+            info: "214 к.15",
           },
-          3
-        ),
-        new Lesson(
-          {
-            title: "",
-            info: "",
-          },
-          4,
-          {
-            title: "Веб-технології та дизайн",
-            info: "дистанційно",
-          }
+          4
         )
       )
     );
