@@ -18,7 +18,7 @@ export class ScheduleService {
         new Lesson(
           {
             title: "Програмування мобільних пристроїв",
-            info: "223 к.15",
+            info: "206 к.15",
           },
           1
         ),
@@ -26,7 +26,7 @@ export class ScheduleService {
           {
             title:
               "Моделювання та аналіз предметної області",
-            info: "223 к.15",
+            info: "206 к.15",
           },
           2
         )
@@ -51,13 +51,13 @@ export class ScheduleService {
         ),
         new Lesson(
           {
-            title: "",
-            info: "",
+            title: "Технологія програмування баз даних",
+            info: "214 к.15",
           },
           7,
           {
-            title: "Технологія програмування баз даних",
-            info: "214 к.15",
+            title: "",
+            info: "",
           }
         )
       )
@@ -67,28 +67,18 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Технологія веб-програмування",
-            info: "230 к.15",
+            title: "Програмування мобільних пристроїв",
+            info: "214 к.15",
           },
-          4
+          1
         ),
         new Lesson(
           {
-            title: "Комп'ютерні мережі",
-            info: "230 к.15",
+            title:
+              "Моделювання та аналіз предметної області",
+            info: "225 к.15",
           },
-          5
-        ),
-        new Lesson(
-          {
-            title: "Правова культура особистості",
-            info: "230 к.15",
-          },
-          6,
-          {
-            title: "Економіка і бізнес",
-            info: "230 к.15",
-          }
+          2
         )
       )
     );
@@ -97,34 +87,27 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Моделювання та аналіз предметної області",
-            info: "230 к.15",
+            title: "Конструювання програмного забезпечення",
+            info: "234 к.15",
+          },
+          3
+        ),
+        new Lesson(
+          {
+            title: "Комп'ютерні мережі",
+            info: "213 к.15",
           },
           4
         ),
         new Lesson(
           {
-            title: "Конструювання програмного забезпечення",
-            info: "230 к.15",
-          },
-          5
-        ),
-        new Lesson(
-          {
-            title: "Програмування мобільних пристроїв",
-            info: "230 к.15",
-          },
-          6
-        ),
-        new Lesson(
-          {
-            title: "Технологія програмування баз даних ",
-            info: "230 к.15",
-          },
-          7,
-          {
             title: "",
             info: "",
+          },
+          5,
+          {
+            title: "Технологія програмування баз даних",
+            info: "233 к.15",
           }
         )
       )
@@ -152,7 +135,7 @@ export class ScheduleService {
         )
       )
     );
-
+    
     this.bells = new Array<string>(
       "8:30 - 9:50",
       "10:05 - 11:25",
