@@ -62,31 +62,17 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Військова підготовка",
-            info: "могут быть ещё пары",
-          },
-          1
-        ),
-        new Lesson(
-          {
-            title: "Військова підготовка",
-            info: "могут быть ещё пары",
-          },
-          2
-        ),
-        new Lesson(
-          {
-            title: "Військова підготовка",
-            info: "могут быть ещё пары",
-          },
-          3
-        ),
-        new Lesson(
-          {
-            title: "Військова підготовка",
-            info: "могут быть ещё пары",
+            title: "Програмна технологія dot.NET",
+            info: "213 к.15",
           },
           4
+        ),
+        new Lesson(
+          {
+            title: "ОС мобільних систем",
+            info: "224 к.15",
+          },
+          6
         )
       )
     );
@@ -155,12 +141,41 @@ export class ScheduleService {
             title: "Безпека програм та даних",
             info: "230 к.15",
           }
+        ),
+        new Lesson(
+          {
+            title: "Програмна технологія dot.NET",
+            info: "232 к.15",
+          },
+          4,
+          {
+            title: "ОС мобільних систем",
+            info: "232 к.15",
+          }
+        ),
+        new Lesson(
+          {
+            title: "",
+            info: "",
+          },
+          5,
+          {
+            title: "ОС Linux",
+            info: "232 к.15",
+          }
         )
       )
     );
     this.lessons.set(
       Day.Friday,
       new Array<Lesson>(
+        new Lesson(
+          {
+            title: "ОС Linux",
+            info: "213 к.15",
+          },
+          2
+        ),
         new Lesson(
           {
             title: "Групова динаміка та комунікації",
