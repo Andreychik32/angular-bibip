@@ -42,7 +42,7 @@ export class ScheduleService {
         ),
         new Lesson(
           {
-            title: "Засоби мультимедія",
+            title: "Засоби мультимедіа",
             info: "231 к.15",
           },
           6,
@@ -106,7 +106,7 @@ export class ScheduleService {
         ),
         new Lesson(
           {
-            title: "Засоби мультимедія",
+            title: "Засоби мультимедіа",
             info: "213 к.15",
           },
           3
