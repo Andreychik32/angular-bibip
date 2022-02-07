@@ -1,6 +1,7 @@
 export interface LessonType {
   title: string;
   info: string;
+  color?: string;
 }
 
 export const getCurrentWeek = (): Week => {

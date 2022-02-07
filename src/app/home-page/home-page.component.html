@@ -24,6 +24,7 @@
             <div class="content">
               <div
                 class="title"
+                [style.color]="getLessonDataBySelectedWeek(lesson).color"
                 [innerHTML]="getLessonDataBySelectedWeek(lesson).title"
               ></div>
               <div

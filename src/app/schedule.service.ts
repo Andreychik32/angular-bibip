@@ -8,10 +8,14 @@ export class ScheduleService {
   private lessons: Map<Day, Array<Lesson>>;
   private bells: Array<string>;
   currentWeek: Week;
+  colors: Array<string>;
 
   constructor() {
     this.currentWeek = getCurrentWeek();
     this.lessons = new Map<Day, Array<Lesson>>();
+    this.colors = ["#0057E8", "#996448", "#53AB1E"] // 0 - Інтелектуальний аналіз даних, 1 - Засоби мультимедіа, 2 - Програмне забезпечення вбудованих систем
+
+
     this.lessons.set(
       Day.Monday,
       new Array<Lesson>(
@@ -44,6 +48,7 @@ export class ScheduleService {
           {
             title: "Засоби мультимедіа",
             info: "231 к.15",
+            color: this.colors[1]
           },
           6,
           {
@@ -60,6 +65,7 @@ export class ScheduleService {
           {
             title: "Інтелектуальний аналіз даних",
             info: "231 к.15",
+            color: this.colors[0]
           },
           5,
           {
@@ -71,6 +77,7 @@ export class ScheduleService {
           {
             title: "Програмне забезпечення вбудованих систем",
             info: "231 к.15",
+            color: this.colors[2]
           },
           6,
           {
@@ -94,6 +101,7 @@ export class ScheduleService {
           {
             title: "Інтелектуальний аналіз даних",
             info: "214 к.15",
+            color: this.colors[0]
           },
           1
         ),
@@ -101,6 +109,7 @@ export class ScheduleService {
           {
             title: "Програмне забезпечення вбудованих систем",
             info: "213 к.15",
+            color: this.colors[2]
           },
           2
         ),
@@ -108,6 +117,7 @@ export class ScheduleService {
           {
             title: "Засоби мультимедіа",
             info: "213 к.15",
+            color: this.colors[1]
           },
           3
         ),
