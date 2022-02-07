@@ -17,43 +17,39 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "",
-            info: "",
+            title: "Проектний практикум",
+            info: "231 к.15",
           },
-          1,
+          3
+        ),
+        new Lesson(
           {
-            title: "Технології BlockChain",
+            title: "Економіка програмного забезпечення",
             info: "230 к.15",
-          }
-        ),
-        new Lesson(
-          {
-            title: "",
-            info: "",
-          },
-          2,
-          {
-            title: "Комп’ютерні мережі та кібербезпека",
-            info: "232 к.10",
-          }
-        ),
-        new Lesson(
-          {
-            title: "Технології BlockChain",
-            info: "233,234 к.15",
-          },
-          3,
-          {
-            title: "",
-            info: "",
-          }
-        ),
-        new Lesson(
-          {
-            title: "Комп’ютерні мережі та кібербезпека",
-            info: "223 к.15",
           },
           4
+        ),
+        new Lesson(
+          {
+            title: "Архітектура та проектування",
+            info: "230 к.15",
+          },
+          5,
+          {
+            title: "",
+            info: "",
+          }
+        ),
+        new Lesson(
+          {
+            title: "Засоби мультимедія",
+            info: "231 к.15",
+          },
+          6,
+          {
+            title: "Архітектура та проектування",
+            info: "231 к.15",
+          },
         )
       )
     );
@@ -62,17 +58,32 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Програмна технологія dot.NET",
-            info: "213 к.15",
+            title: "Інтелектуальний аналіз даних",
+            info: "231 к.15",
           },
-          4
+          5,
+          {
+            title: "Професійна практика ПІ",
+            info: "232 к.15",
+          },
         ),
         new Lesson(
           {
-            title: "ОС мобільних систем",
-            info: "224 к.15",
+            title: "Програмне забезпечення вбудованих систем",
+            info: "231 к.15",
           },
-          6
+          6,
+          {
+            title: "Професійна практика ПІ",
+            info: "232 к.15",
+          },
+        ),
+        new Lesson(
+          {
+            title: "Емпіричні методи",
+            info: "231 к.15",
+          },
+          7
         )
       )
     );
@@ -81,28 +92,31 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Якість програмного забезпечення",
+            title: "Інтелектуальний аналіз даних",
             info: "214 к.15",
           },
           1
         ),
         new Lesson(
           {
-            title: "Архітектура та проектування",
-            info: "214 к.15",
+            title: "Програмне забезпечення вбудованих систем",
+            info: "213 к.15",
           },
           2
         ),
         new Lesson(
           {
-            title: "Менеджмент проектів",
+            title: "Засоби мультимедія",
+            info: "213 к.15",
+          },
+          3
+        ),
+        new Lesson(
+          {
+            title: "Економіка програмного забезпечення",
             info: "233 к.15",
           },
-          4,
-          {
-            title: "",
-            info: "",
-          }
+          5
         )
       )
     );
@@ -111,57 +125,27 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "Групова динаміка та комунікації",
-            info: "230 к.15",
+            title: "Емпіричні методи",
+            info: "211 к.15",
           },
-          1,
+          2
+        ),
+        new Lesson(
+          {
+            title: "Проектний практикум",
+            info: "213 к.15",
+          },
+          3
+        ),
+        new Lesson(
           {
             title: "",
             info: "",
-          }
-        ),
-        new Lesson(
-          {
-            title: "Менеджмент проектів",
-            info: "230 к.15",
-          },
-          2,
-          {
-            title: "Якість програмного забезпечення",
-            info: "230 к.15",
-          }
-        ),
-        new Lesson(
-          {
-            title: "Архітектура та проектування",
-            info: "230 к.15",
-          },
-          3,
-          {
-            title: "Безпека програм та даних",
-            info: "230 к.15",
-          }
-        ),
-        new Lesson(
-          {
-            title: "Програмна технологія dot.NET",
-            info: "232 к.15",
           },
           4,
           {
-            title: "ОС мобільних систем",
-            info: "232 к.15",
-          }
-        ),
-        new Lesson(
-          {
-            title: "",
-            info: "",
-          },
-          5,
-          {
-            title: "ОС Linux",
-            info: "232 к.15",
+            title: "Професійна практика ПІ",
+            info: "211 к.15",
           }
         )
       )
@@ -171,22 +155,15 @@ export class ScheduleService {
       new Array<Lesson>(
         new Lesson(
           {
-            title: "ОС Linux",
-            info: "213 к.15",
-          },
-          2
-        ),
-        new Lesson(
-          {
-            title: "Групова динаміка та комунікації",
-            info: "225 к.15",
+            title: "Професійна практика ПІ",
+            info: "214 к.15",
           },
           4
         ),
         new Lesson(
           {
-            title: "Безпека програм та даних",
-            info: "223 к.15",
+            title: "Архітектура та проектування",
+            info: "214 к.15",
           },
           5
         )
